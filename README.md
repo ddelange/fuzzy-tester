@@ -123,23 +123,8 @@ The `scripts` folder contains example scripts for creating fuzzy tests. For exam
    For more information, check [fuzzy-tests](http://github.com/Pelias/fuzzy-tests).
 
 ## Output Generators
-The acceptance-tests support multiple different output generators, like an email and terminal output. See `node test
---help` for details on how to specify a generator besides the default. Note that the `email` generator requires an
-AWS account, and that your `pelias-config` file contain the following configuration:
-
-```javascript
-{
-  "acceptance-tests": {
-    "email": {
-      "ses": {
-        "accessKeyId": "AWSACCESSKEY",
-        "secretAccessKey": "AWS/Secret/key",
-      },
-      "recipients": ["recipient1@domain.com", "recipient2@domain.com"], // the list of recipients
-    }
-  }
-}
-```
+The acceptance-tests support multiple different output generators, currently `terminal`, `autocomplete`, `json`, and `csv`. See `node test
+--help` for details on how to specify a generator besides the default.
 
 ### Autocomplete mode
 
